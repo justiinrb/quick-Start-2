@@ -2,6 +2,7 @@ package com.jusdev.quickstart
 
 import android.os.Bundle
 import android.util.Log
+import android.util.Log.println
 
 import androidx.appcompat.app.AppCompatActivity
 
@@ -14,14 +15,15 @@ var palabra: String="malo"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Log.v( "numero",":"+numero)
-        Log.v( "palabra",":"+palabra)
-
-numero =  2
-palabra = "malo"
-
+        mostrarhola()
+        mostardatos()
         }
-
+fun mostrarhola(){
+    Log.v("mostrar","Hola kotlin")
+}
+    fun mostardatos() {
+Log.v("datos","nombre , apellido")
+    }
 
     }
 
