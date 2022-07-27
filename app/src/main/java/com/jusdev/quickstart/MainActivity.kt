@@ -13,9 +13,21 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        sumaN(5 ,6 )
+        datos("jkustin", "Roca")
 
-        val txt =  findViewById<TextView>(R.id.Text_to)
-        txt.text = " justin rocaf"
+    }
+    fun sumaN (num1:Int,num2 : Int){
+        var suma = num1 + num2
+        Log.v("sum","La suma de los numeros es"+suma)
+    }
+
+    fun datos(nombre:String, apellido:String){
+
+        var nombre = nombre
+        var apellido = apellido
+
+        Log.v("dat","Sus datos son "+nombre+" "+apellido)
     }
 }
 
