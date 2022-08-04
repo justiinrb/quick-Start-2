@@ -15,32 +15,27 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val Texto = findViewById<TextView>(R.id.Text_to) as TextView
 
-        var resultado: Int = sumaNumeros(45 ,2 ,3 )
-        Texto.text = " El valor a retornar es "+resultado
-          
+var resulta : String = notas(7,8,9,9)
+
+        Texto.text = " el resultado es "+resulta
     }
 
+    fun notas (Num1:Int, Num2:Int,Num3:Int,Num4:Int) :String{
 
-    fun sumaNumeros (Num1:Int, Num2:Int,Num3:Int) :Int{
-    var sum : Int = Num1+Num2+Num3
-    return sum
+        var res : Int = (Num1+Num2+Num3+Num4)/4
+
+        if(res>=7){
+
+            return "feli"
+
+        }else{
+
+            return "no aprobo"
+
+
+    }
+
 }
-    fun Datos_P(Nombre: String,Apellido:String):String{
-
-        val nombre = Nombre
-        val apellido = Apellido
-
-        return nombre ; apellido
-
-
-    }
-
-
-
-
-
-
-
 
 
 }
