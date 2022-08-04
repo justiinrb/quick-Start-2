@@ -26,7 +26,7 @@ lateinit var texto :TextView
           10-> Texto.text = "Excelente"
 
           else->{
-              Texto.text = "no esta definida esa calificacion"
+              Texto.text = " esta calificacion no esta definida"
 
           }
 
