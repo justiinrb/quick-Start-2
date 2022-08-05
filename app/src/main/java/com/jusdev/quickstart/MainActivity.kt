@@ -16,24 +16,15 @@ lateinit var texto :TextView
         setContentView(R.layout.activity_main)
         val Texto = findViewById<TextView>(R.id.Text_to) as TextView
 
-        var calificacion = 5
-      when(calificacion){
+        var numero = 5
+var arreglos = arrayOf(5, 100, 48)
 
-          6-> Texto.text = "Rerprobado"
-          7-> Texto.text = "puede ser mejor"
-          8-> Texto.text = "bien"
-          3-> Texto.text = "muy bien"
-          10-> Texto.text = "Excelente"
-
-          else->{
-              Texto.text = "no esta definida esa calificacion"
-
-          }
+        Texto.text = arreglos [2].toString()
 
       }
     }
 
-}
+
 
 
 
