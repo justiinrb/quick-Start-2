@@ -18,26 +18,19 @@ class MainAct : AppCompatActivity() {
 
 
         var numero = 0
-
-
-        while (numero < 5) {
-
-            Log.v("Res", "hola")
-
+        do{
+            //instruccion
+          Log.v("men","Hola do while")
             numero++
-        }
-        var dia = 1
-        Log.v("ds","Empieza la semana")
+        } while (numero <= 4)
 
-        while(dia < 6){
-            if (dia == 1){
-                Log.v("Dia","$dia dias  laboral")
-            }else{
-                Log.v("dy","$dia Dia laboral")
-            }
-            dia++
-        }
-        Log.v("in","Dia de descanso")
+        var num =   2
+        var i = 1
+        do {
+            Log.v("inst","2 * $i = " + num * i  )
+            i++
+        }while (i< 11)
+
     }
 
 
