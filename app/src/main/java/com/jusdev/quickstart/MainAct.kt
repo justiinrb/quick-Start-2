@@ -24,7 +24,7 @@ texto=findViewById<TextView>(R.id.Text_to) as TextView
        var arreglo = arrayOf(100,200,300)
 
        for(valor: Int in arreglo){
-           //instruccion
+           //instruccion.
            Log.v("fo",""+valor)
 
    }
