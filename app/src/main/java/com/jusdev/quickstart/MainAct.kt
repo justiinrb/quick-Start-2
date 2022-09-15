@@ -16,19 +16,25 @@ class MainAct : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 texto=findViewById<TextView>(R.id.Text_to) as TextView
+ 
+var jus : persona = persona()
+        jus.caminar()
 
-
-       //ciclos - loops - bucles
-       //cada elemento dentro de una collecion
-       //item in collection
-       var arreglo = arrayOf(100,200,300)
-
-       for(valor: Int in arreglo){
-           //instruccion.
-           Log.v("fo",""+valor)
-
-   }
 }
+    class persona (  ){
+       var nombre : String = ""
+       var edad : Int =0
+       var peso :String = ""
+
+        fun correr(){
+            Log.v("co","Jus esta corriendo")
+        }
+        fun caminar(){
+            Log.v("co","Jus esta caminando")
+        }
+
+    }
+
 
 
 
