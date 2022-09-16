@@ -17,13 +17,16 @@ class MainAct : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 texto=findViewById<TextView>(R.id.Text_to) as TextView
 
-        var justin : Persona = Persona("",23,15)
+var Articulo1 = Articulo1(1,"Computadora",200f)
 
-        justin.altura = 1.60
+        Log.v("ar",""+Articulo1)
+Articulo1.desc = "Laptop"
+        Log.v("lp",""+Articulo1)
 
-        Log.v("al", " "+justin.altura)
 
     }
+data class Articulo1 (var codigo : Int,var desc : String, var Precio: Float)
+
 
 
 
