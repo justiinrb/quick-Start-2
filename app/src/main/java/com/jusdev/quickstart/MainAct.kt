@@ -17,11 +17,11 @@ class MainAct : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 texto=findViewById<TextView>(R.id.Text_to) as TextView
 
-        var jus : Persona = Persona("Justin",4,26)
-        jus.caminar()
+        var justin : Persona = Persona("",23,15)
 
-        var stef : Persona = Persona("stef",29,58)
-        stef.caminar()
+        justin.altura = 1.60
+
+        Log.v("al", " "+justin.altura)
 
     }
 
