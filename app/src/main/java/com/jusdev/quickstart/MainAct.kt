@@ -21,6 +21,8 @@ class MainAct : AppCompatActivity() {
         val prog1 =Programador("viky",39)
         prog1.imprimirNombre()
 
+        val usua1 = Usuario("willy",2500)
+usua1.saludar()
     }
     open class Persona(val nombre :String, val edad : Int){
 
@@ -39,6 +41,22 @@ class MainAct : AppCompatActivity() {
         }
 
     }
+    abstract class Persona2(val nombre : String){
+        abstract fun saludar()
+        fun imprimirNombre(){
+            Log.v("sl","Nombre es ${nombre}")
+        }
+    }
+    class Usuario(nombre: String, val sueldo : Int):Persona2(nombre){
+
+        //sobreescribir los metodos
+        override fun saludar() {
+            Log.v("sal","El usuario esta saludando")
+        }
+
+
+    }
+
 
 
 
