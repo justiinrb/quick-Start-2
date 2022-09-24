@@ -15,21 +15,39 @@ class MainAct : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         texto = findViewById<TextView>(R.id.Text_to) as TextView
 
-Log.v("ob",auto.color)
-        auto.encender()
-    }
-object  auto {
+        val per1 = Persona("justin",17)
+        per1.imprimirEdad()
 
-    //atributos
-    val color = "azul"
-//metodos
-    fun encender(){
-
+        val prog1 =Programador("viky",39)
+        prog1.imprimirNombre()
 
     }
+    open class Persona(val nombre :String, val edad : Int){
+
+        open fun imprimirEdad(){
+            Log.v("Nom","Su edad es "+ edad)
+        }
+        open fun imprimirNombre(){
+            Log.v("Nom","Su nombre es "+ nombre)
+        }
+
+    }
+    class Programador(nombre: String, edad: Int) : Persona(nombre, edad) {
+
+        override fun imprimirNombre(){
+            Log.v("Nom","El nombre del programador es "+ nombre)
+        }
+
+    }
+
+
+
 
 }
 
-}
+
+
+
+
 
 
