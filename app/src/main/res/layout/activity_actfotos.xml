@@ -4,22 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
     android:orientation="vertical"
-    tools:context=".MainAct">
+    tools:context=".Actfotos">
+
 
     <TextView
-        android:id="@+id/lbltitle"
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="15dp"
-        android:gravity="center"
         android:text="TextView"
-        android:textSize="20dp" />
+        android:textSize="18dp"
+        android:gravity="center"
+        android:padding="15dp" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvrazas"
+        android:id="@+id/rvimagen"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+
 </LinearLayout>

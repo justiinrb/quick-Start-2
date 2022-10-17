@@ -13,16 +13,12 @@ import com.jusdev.quickstart.modelo.Animal
 
 class RecyclerAdapter(
     private val context: Context,
-    val listaAnimales: Array<Animal>,
+    val lista: MutableList<ListadoPrinci>,
     val ItemClickListener: OnAnimaClickListener
-) :
-    RecyclerView.Adapter<BaseViewHolder<*>>() {
-
+    ) : RecyclerView.Adapter<BaseViewHolder<*>>() {
     interface OnAnimaClickListener {
-
         fun OnImageClick(image: String)
         fun OnItemClick(nombre: String)
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<*> {
@@ -32,28 +28,26 @@ class RecyclerAdapter(
         )
     }
 
-    override fun getItemCount(): Int = listaAnimales.size
+    override fun getItemCount(): Int = lista.size
 
     override fun onBindViewHolder(holder: BaseViewHolder<*>, position: Int) {
         when (holder) {
-            is AnimalesViewholder -> holder.bind(listaAnimales[position], position)
+            is AnimalesViewholder -> holder.bind(lista[position], position)
             else -> throw IllegalArgumentException("se le olvido de pasar un viewholder en el bind")
         }
     }
 
-    inner class AnimalesViewholder(itemView: View) : BaseViewHolder<Animal>(itemView) {
-        override fun bind(item: Animal, position: Int) {
 
-
-                val ima: ImageView
-            ima = itemView.findViewById(R.id.image_animal)
-            ima.setOnClickListener { ItemClickListener.OnImageClick(item.image) }
-
-            itemView.setOnClickListener { ItemClickListener.OnItemClick(item.nombre) }
-            Glide.with(context).load(item.image).into(itemView.findViewById(R.id.image_animal))
+    inner class AnimalesViewholder(itemView: View) : BaseViewHolder<ListadoPrinci>(itemView) {
+        override fun bind(item: ListadoPrinci, position: Int) {
+            val ima: ImageView
+            //ima = itemView.findViewById(R.id.image_animal)
+            //ima.setOnClickListener { ItemClickListener.OnImageClick(item.image) }
+            itemView.setOnClickListener { ItemClickListener.OnItemClick(item.razas) }
+            //Glide.with(context).load(item.image).into(itemView.findViewById(R.id.image_animal))
             val x: TextView
             x = itemView.findViewById(R.id.txt_nombre_animal)
-            x.text = item.nombre
+            x.text = item.razas
         }
     }
 

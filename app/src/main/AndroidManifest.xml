@@ -9,16 +9,33 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.QuickStart">
+        android:theme="@style/Theme.QuickStart"
+        android:usesCleartextTraffic="true">
+        <!--<activity
+            android:name=".MainAc2"
+            android:exported="false"
+            android:label="@string/titleactivity_main_ac2"
+            android:theme="@style/Theme.QuickStart.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>-->
         <activity
-            android:name="ImageDetail"
+            android:name=".Actfotos"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ImageDetail"
             android:label="@string/title_activity_image_detail"
-            android:theme="@style/Theme.QuickStart.NoActionBar"></activity>
+            android:theme="@style/Theme.QuickStart.NoActionBar" />
         <activity
-            android:name=".MainAct"
+            android:name=".MainAc2"
+            android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.QuickStart.NoActionBar"
-            android:exported="true">
+            android:theme="@style/Theme.QuickStart.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
